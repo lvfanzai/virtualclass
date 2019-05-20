@@ -3,19 +3,22 @@
 #include <string.h>
 #include <string>
 #include <stack>
-#include "classmake.h"
-#include "c_api.h"
+#include "ClassMake.h"
+#include "Handler.h"
 
-std::unique_ptr<classmake> m_classmake;
+std::unique_ptr<ClassMake> m_classmake;
 
 Handler* m_handler;
 
 int main(int argc, char* argv[])
 {
-	m_classmake = classmake::make();
+	auto classmake = ClassMake::make();
+	m_classmake = std::move(classmake);
+
 	m_handler = Handler::make();
 
 	m_classmake->plog();
+	m_handler->Hlog();
 
 	return 0;
 }

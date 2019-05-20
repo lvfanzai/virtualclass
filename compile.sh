@@ -1,8 +1,9 @@
 #!/bin/bash
+rm -rf build
 mkdir -p build
 pushd build
 cmake ..
 make -j 8
-cp ./main_process ..
+cp ./CppUnique ..
 
 rm -rf build

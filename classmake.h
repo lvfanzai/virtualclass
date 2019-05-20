@@ -1,8 +1,9 @@
 #include <string>
 #include <vector>
 
-class classmake {
+class ClassMake {
 public:
+    virtual ~ClassMake() = default;
     virtual void plog() = 0;
-    static std::unique_ptr<classmake> make();
+    static std::unique_ptr<ClassMake> make();
 };

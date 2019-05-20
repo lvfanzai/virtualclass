@@ -13,10 +13,10 @@ project(main_process)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++14")
 #向工程添加源文件                                       
-add_executable(main_process 
-                leetcode.cpp
-                c_api.cpp
-                classmake.cpp)  
+add_executable(CppUnique 
+                CppUnique.cpp
+                Handler.cpp
+                ClassMake.cpp)  
  
 #添加链接库                                 
-#target_link_libraries(main_process ${OpenCV_LIBS} ) 
+#target_link_libraries(CppUnique ${OpenCV_LIBS} ) 

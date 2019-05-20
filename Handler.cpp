@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#include "c_api.h"
+#include "Handler.h"
 
 class HandlerImpl final: public Handler {
 public:
@@ -9,11 +9,11 @@ public:
     }
     void Hlog() override
     {
-        printf("Hlog\n");
+        printf("Hlog HandlerImpl\n");
     }
 };
 
 Handler* Handler::make(){
-    printf("test point\n");
+    printf("Handler\n");
     return new HandlerImpl();
 }

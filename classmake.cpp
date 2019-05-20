@@ -1,19 +1,19 @@
-#include "classmake.h"
+#include "ClassMake.h"
 
-
-class classmakeImpl  final : public classmake {
+class ClassMakeImpl  final : public ClassMake {
 public:
-    classmakeImpl(){
-        printf("test make\n");
+    ClassMakeImpl(){
+        printf("ClassMakeImpl\n");
     }
     void plog() override
     {
-        printf("plog\n");
+        printf("plog ClassMakeImpl\n");
     }
 };
 
 
-std::unique_ptr<classmake> classmake::make()
+std::unique_ptr<ClassMake> ClassMake::make()
 {
-    return std::make_unique<classmakeImpl>();
+    printf("ClassMake\n");
+    return std::make_unique<ClassMakeImpl>();
 }
